@@ -1,0 +1,31 @@
+#drum-machine 
+  display: flex
+  align-items: center
+
+
+.pads 
+  width: min-content
+  display: grid
+  grid: auto-flow / 1fr 1fr 1fr
+
+@keyframes click
+  0%
+    background-color: yellow
+  100%
+    background-color: gray
+
+.drum-pad 
+  width: 100px
+  height: 100px
+  margin: 10px
+  background-color: gray
+  border-radius: 5px
+  box-sizing: border-box
+  display: flex
+  justify-content: center
+  align-items: center
+  user-select: none
+
+  &:focus
+    background-color: yellow
+    //animation: click 0.1s 
