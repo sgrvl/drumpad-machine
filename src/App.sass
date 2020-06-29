@@ -1,5 +1,17 @@
+$bg: #333533
+$pad: #242423
+$light: #f5cb5c
+$white: #e8eddf
+$offwhite: #cfdbd5
+  
+body
+  background-color: $white
+  
+  
 #drum-machine 
+  height: 100vh
   display: flex
+  justify-content: center
   align-items: center
 
 
@@ -7,25 +19,31 @@
   width: min-content
   display: grid
   grid: auto-flow / 1fr 1fr 1fr
-
-@keyframes click
-  0%
-    background-color: yellow
-  100%
-    background-color: gray
+  background-color: $bg
+  padding: 20px
+  border: 5px solid $light
+  //box-shadow: 10px 10px 25px darken(transparentize($light, 0.4), 50)
 
 .drum-pad 
   width: 100px
   height: 100px
   margin: 10px
-  background-color: gray
+  background-color: $pad
+  color: $offwhite
+  outline: none
+  border: none
   border-radius: 5px
   box-sizing: border-box
   display: flex
   justify-content: center
   align-items: center
   user-select: none
+  border-right: 2px solid $offwhite
+  border-bottom: 1.5px solid $offwhite
+  border-top: 1.5px solid black
+  border-left: 1px solid black
+  //box-shadow: 2px 2px black
 
   &:focus
-    background-color: yellow
-    //animation: click 0.1s 
+    border: 2px solid $light
+    color: $light
