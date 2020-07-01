@@ -7,22 +7,42 @@ $offwhite: #cfdbd5
 body
   background-color: $white
   
+
+h1 
+  color: $pad
+  margin-bottom: 0.5em
   
 #drum-machine 
   height: 100vh
   display: flex
+  flex-direction: column
   justify-content: center
   align-items: center
 
 
 .pads 
-  width: min-content
+  min-width: min-content
+  width: 90%
+  max-width: 300px
   display: grid
   grid: auto-flow / 1fr 1fr 1fr
   background-color: $bg
   padding: 20px
   border: 5px solid $light
-  //box-shadow: 10px 10px 25px darken(transparentize($light, 0.4), 50)
+
+#display 
+  font-family: monospace
+  text-transform: uppercase
+  font-size: 1.25em
+  letter-spacing: 2px
+  width: 75%
+  text-align: center
+  justify-self: center
+  grid-column: 1/4
+  margin-top: 20px
+  padding: 10px
+  background-color: $pad  
+  color: $offwhite
 
 .drum-pad 
   width: 100px
@@ -38,10 +58,11 @@ body
   justify-content: center
   align-items: center
   user-select: none
-  border-right: 2px solid $offwhite
-  border-bottom: 1.5px solid $offwhite
-  border-top: 1.5px solid black
-  border-left: 1px solid black
+  border: 1px solid $offwhite
+  //border-right: 2px solid $offwhite
+  //border-bottom: 1.5px solid $offwhite
+  //border-top: 1.5px solid black
+  //border-left: 1px solid black
   //box-shadow: 2px 2px black
 
   &:focus
